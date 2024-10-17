@@ -242,12 +242,13 @@ function getRectangleString(width, height) {
   if (!width || !height) {
     throw new Error('Not implemented');
   }
-  const top = '┌' + '─'.repeat(width - 2) + '┐\n';
+  const top = `┌${'─'.repeat(width - 2)}┐\n`;
   let middle = '';
+  // eslint-disable-next-line no-plusplus
   for (let i = 0; i < height - 2; i++) {
-    middle += '│' + ' '.repeat(width - 2) + '│\n';
+    middle += `│${' '.repeat(width - 2)}│\n`;
   }
-  const bottom = '└' + '─'.repeat(width - 2) + '┘\n';
+  const bottom = `└${'─'.repeat(width - 2)}┘\n`;
   return top + middle + bottom;
 }
 
