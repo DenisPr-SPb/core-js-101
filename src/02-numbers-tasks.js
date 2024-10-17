@@ -194,6 +194,7 @@ function getParallelepipedDiagonal(a, b, c) {
  *   1678, 3  => 2000
  */
 function roundToPowerOfTen(num, pow) {
+  // eslint-disable-next-line no-restricted-properties
   const factor = Math.pow(10, pow);
   return Math.round(num / factor) * factor;
 }
@@ -202,7 +203,7 @@ function roundToPowerOfTen(num, pow) {
  * See: https://en.wikipedia.org/wiki/Primality_test
  *
  * @param {number} n
- * @return {bool}
+ * @return {boolean}
  *
  * @example:
  *   4 => false
@@ -242,6 +243,7 @@ function isPrime(n) {
  *   toNumber(new Number(42), 0) => 42
  */
 function toNumber(value, def) {
+  // eslint-disable-next-line no-restricted-globals
   return isNaN(Number(value)) ? def : Number(value);
 }
 
